@@ -28,16 +28,93 @@ public class MainActivity extends AppCompatActivity {
     }
     public void checkButtonToCart(View view) {
         Button button = (Button) view;
+        int id = view.getId();
+        SharedData data = SharedData.getInstance();
         if(button.getText().toString().equals("Added"))
         {
             button.setBackgroundResource(android.R.drawable.btn_default);
             button.setText("Add to Cart");
+            setNotVisible(id);
+            if(data.click > 0)
+                --data.click;
         }
         else{
             button.setBackgroundColor(Color.GREEN);
             button.setText("Added");
-        }
+            setVisible(id);
+            ++data.click;
 
+        }
+    }
+    public void setVisible(int id) {
+        SharedData data = SharedData.getInstance();
+        switch (id) {
+            case R.id.button_delivering_happiness:
+                data.setItemsVisible(0);
+                break;
+            case R.id.button_stumbling_on_happiness:
+                data.setItemsVisible(1);
+                break;
+            case R.id.button_shortness:
+                data.setItemsVisible(2);
+                break;
+            case R.id.button_meditations:
+                data.setItemsVisible(3);
+                break;
+            case R.id.button_letter:
+                data.setItemsVisible(4);
+                break;
+            case R.id.button_whatif:
+                data.setItemsVisible(5);
+                break;
+            case R.id.button_power:
+                data.setItemsVisible(6);
+                break;
+            case R.id.button_thinking:
+                data.setItemsVisible(7);
+                break;
+            case R.id.button_nation:
+                data.setItemsVisible(8);
+                break;
+            case R.id.button_1984:
+                data.setItemsVisible(9);
+                break;
+        }
+    }
+    public void setNotVisible(int id) {
+        SharedData data = SharedData.getInstance();
+        switch (id) {
+            case R.id.button_delivering_happiness:
+                data.setItemNotVisible(0);
+                break;
+            case R.id.button_stumbling_on_happiness:
+                data.setItemNotVisible(1);
+                break;
+            case R.id.button_shortness:
+                data.setItemNotVisible(2);
+                break;
+            case R.id.button_meditations:
+                data.setItemNotVisible(3);
+                break;
+            case R.id.button_letter:
+                data.setItemNotVisible(4);
+                break;
+            case R.id.button_whatif:
+                data.setItemNotVisible(5);
+                break;
+            case R.id.button_power:
+                data.setItemNotVisible(6);
+                break;
+            case R.id.button_thinking:
+                data.setItemNotVisible(7);
+                break;
+            case R.id.button_nation:
+                data.setItemNotVisible(8);
+                break;
+            case R.id.button_1984:
+                data.setItemNotVisible(9);
+                break;
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
