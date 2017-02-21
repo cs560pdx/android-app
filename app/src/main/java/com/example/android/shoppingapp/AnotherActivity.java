@@ -1,9 +1,11 @@
 package com.example.android.shoppingapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +42,13 @@ public class AnotherActivity extends AppCompatActivity  {
                     Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_cart, menu);
+        return true;
     }
 
     public void setQuantity(int itemId, final int indexPos){
@@ -89,7 +98,10 @@ public class AnotherActivity extends AppCompatActivity  {
         int itemId = item.getItemId();
         switch (itemId){
             case android.R.id.home:
-                finish();
+                Intent intent = new Intent(AnotherActivity.this, MainActivity.class);
+                startActivity(intent);
+//                finish();
+                break;
         }
         return true;
     }
@@ -97,7 +109,9 @@ public class AnotherActivity extends AppCompatActivity  {
         SharedData data = SharedData.getInstance();
         LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_delivering);
         data.quantity[0] = 0;
-        data.click--;
+        if(data.click > 0)
+            data.click--;
+        data.items[0] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -106,7 +120,9 @@ public class AnotherActivity extends AppCompatActivity  {
         SharedData data = SharedData.getInstance();
         LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_stumbling);
         data.quantity[1] = 0;
-        data.click--;
+        if(data.click > 0)
+            data.click--;
+        data.items[1] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -117,6 +133,7 @@ public class AnotherActivity extends AppCompatActivity  {
         LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_shortness);
         data.quantity[2] = 0;
         data.click--;
+        data.items[2] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -126,7 +143,9 @@ public class AnotherActivity extends AppCompatActivity  {
         SharedData data = SharedData.getInstance();
         LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_meditations);
         data.quantity[3] = 0;
-        data.click--;
+        if(data.click > 0)
+            data.click--;
+        data.items[3] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -136,7 +155,9 @@ public class AnotherActivity extends AppCompatActivity  {
         SharedData data = SharedData.getInstance();
         LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_letter);
         data.quantity[4] = 0;
-        data.click--;
+        if(data.click > 0)
+            data.click--;
+        data.items[4] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -144,9 +165,59 @@ public class AnotherActivity extends AppCompatActivity  {
 
     public void deleteItemWhatIf(View view) {
         SharedData data = SharedData.getInstance();
-        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_letter);
+        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_whatif);
         data.quantity[5] = 0;
-        data.click--;
+        if(data.click > 0)
+            data.click--;
+        data.items[5] = false;
+        delete.removeAllViews();
+        double totalCost = calculateTotal();
+        setTotal(totalCost);
+    }
+
+    public void deleteItemPower(View view) {
+        SharedData data = SharedData.getInstance();
+        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_power);
+        data.quantity[6] = 0;
+        if(data.click > 0)
+            data.click--;
+        data.items[6] = false;
+        delete.removeAllViews();
+        double totalCost = calculateTotal();
+        setTotal(totalCost);
+    }
+
+    public void deleteItemThinking(View view) {
+        SharedData data = SharedData.getInstance();
+        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_thinking);
+        data.quantity[7] = 0;
+        if(data.click > 0)
+            data.click--;
+        data.items[7] = false;
+        delete.removeAllViews();
+        double totalCost = calculateTotal();
+        setTotal(totalCost);
+    }
+
+    public void deleteItemNation(View view) {
+        SharedData data = SharedData.getInstance();
+        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_nation);
+        data.quantity[8] = 0;
+        if(data.click > 0)
+            data.click--;
+        data.items[8] = false;
+        delete.removeAllViews();
+        double totalCost = calculateTotal();
+        setTotal(totalCost);
+    }
+
+    public void deleteItem1984(View view) {
+        SharedData data = SharedData.getInstance();
+        LinearLayout delete = (LinearLayout) findViewById(R.id.checkout_1984);
+        data.quantity[9] = 0;
+        if(data.click > 0)
+            data.click--;
+        data.items[9] = false;
         delete.removeAllViews();
         double totalCost = calculateTotal();
         setTotal(totalCost);
@@ -213,6 +284,45 @@ public class AnotherActivity extends AppCompatActivity  {
             data.quantity[5] = 0;
         }
 
+        if(data.items[6] == true){
+            displayItem(R.id.checkout_power);
+            data.quantity[6] = 1;
+        }
+
+        if(data.items[6] == false){
+            hideItem(R.id.checkout_power);
+            data.quantity[6] = 0;
+        }
+
+        if(data.items[7] == true){
+            displayItem(R.id.checkout_thinking);
+            data.quantity[7] = 1;
+        }
+
+        if(data.items[7] == false){
+            hideItem(R.id.checkout_thinking);
+            data.quantity[7] = 0;
+        }
+
+        if(data.items[8] == true){
+            displayItem(R.id.checkout_nation);
+            data.quantity[8] = 1;
+        }
+
+        if(data.items[8] == false){
+            hideItem(R.id.checkout_nation);
+            data.quantity[8] = 0;
+        }
+
+        if(data.items[9] == true){
+            displayItem(R.id.checkout_1984);
+            data.quantity[9] = 1;
+        }
+
+        if(data.items[9] == false){
+            hideItem(R.id.checkout_1984);
+            data.quantity[9] = 0;
+        }
     }
     public void displayItem(int id) {
         LinearLayout item = (LinearLayout) findViewById(id);
@@ -235,6 +345,18 @@ public class AnotherActivity extends AppCompatActivity  {
                 break;
             case R.id.checkout_whatif:
                 setQuantity(R.id.spinner_checkout_6,5);
+                break;
+            case R.id.checkout_power:
+                setQuantity(R.id.spinner_checkout_7,6);
+                break;
+            case R.id.checkout_thinking:
+                setQuantity(R.id.spinner_checkout_8,7);
+                break;
+            case R.id.checkout_nation:
+                setQuantity(R.id.spinner_checkout_9,8);
+                break;
+            case R.id.checkout_1984:
+                setQuantity(R.id.spinner_checkout_10,9);
                 break;
         }
     }
@@ -259,6 +381,15 @@ public class AnotherActivity extends AppCompatActivity  {
                 break;
             case R.id.checkout_whatif:
                 setQuantity(R.id.spinner_checkout_6,5);
+                break;
+            case R.id.checkout_thinking:
+                setQuantity(R.id.spinner_checkout_8,7);
+                break;
+            case R.id.checkout_nation:
+                setQuantity(R.id.spinner_checkout_9,8);
+                break;
+            case R.id.checkout_1984:
+                setQuantity(R.id.spinner_checkout_10,9);
                 break;
         }
     }

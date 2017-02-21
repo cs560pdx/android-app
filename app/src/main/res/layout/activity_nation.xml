@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_delivering"
+    android:id="@+id/activity_nation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.shoppingapp.deliveringActivity">
-
+    tools:context="com.example.android.shoppingapp.nationActivity">
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -24,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="Delivering Happiness"
+                android:text="Why Nations Fail"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -46,7 +44,7 @@
                         android:layout_gravity="center"
                         android:layout_marginRight="1dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/deliveringhappiness" />
+                        android:src="@drawable/whynationfails" />
 
                 </LinearLayout>
 
@@ -93,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="$18.5"
+                    android:text="$12.90"
                     android:textColor="#80ff0000"
                     android:textSize="20dp" />
             </LinearLayout>
@@ -120,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="XAT8175"
+                    android:text="ABC9"
                     android:textSize="20dp" />
             </LinearLayout>
 
@@ -144,20 +142,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="In his first comic book, "
+                        android:text="Is it culture, the weather,"
                         android:textSize="20dp" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zappos CEO Tony Hsieh shares the different lessons he has learned in business and life, from starting a worm farm to running a pizza business; through LinkExchange (acquired by Microsoft for $265 million), Zappos (acquired by Amazon for over $1 billion in stock), and more."
+                    android:text="geography? Perhaps ignorance of what the right policies are? Simply, no. None of these factors is either definitive or destiny. Otherwise, how to explain why Botswana has become one of the fastest growing countries in the world, while other African nations, such as Zimbabwe, the Congo, and Sierra Leone, are mired in poverty and violence? "
                     android:textSize="20dp" />
             </LinearLayout>
 
 
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

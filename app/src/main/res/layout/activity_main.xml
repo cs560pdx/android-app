@@ -66,7 +66,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC1" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -94,6 +94,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_stumbling"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -140,7 +141,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC2" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -168,6 +169,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_shortness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -214,7 +216,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC3" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -242,6 +244,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_meditations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -288,7 +291,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC4" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -316,6 +319,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_letter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -362,7 +366,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC5" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -390,6 +394,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_whatif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -436,7 +441,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC6" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -464,6 +469,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout_power"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -510,7 +516,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC7" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -536,6 +542,7 @@
 
 
             <LinearLayout
+                android:id="@+id/layout_thinking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -582,7 +589,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC8" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -608,6 +615,7 @@
 
 
             <LinearLayout
+                android:id="@+id/layout_nation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -631,7 +639,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Why Nation Fails"
+                            android:text="Why Nations Fail"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
@@ -654,7 +662,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC9" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -680,6 +688,7 @@
 
 
             <LinearLayout
+                android:id="@+id/layout_a1984"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="25dp">
@@ -726,7 +735,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentLeft="true"
-                                    android:text="Item #: xyz" />
+                                    android:text="Item #: ABC10" />
 
                                 <TextView
                                     android:layout_width="wrap_content"

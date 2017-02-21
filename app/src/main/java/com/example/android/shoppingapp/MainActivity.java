@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SharedData data = SharedData.getInstance();
         LinearLayout layoutDelivering = (LinearLayout) findViewById(R.id.layout_delivering);
         layoutDelivering.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +24,147 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        LinearLayout layoutStumbling = (LinearLayout) findViewById(R.id.layout_stumbling);
+        layoutStumbling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, stumblingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout layoutShortness = (LinearLayout) findViewById(R.id.layout_shortness);
+        layoutShortness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, shortnessActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout layoutMeditations = (LinearLayout) findViewById(R.id.layout_meditations);
+        layoutMeditations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, meditationsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout layoutLetter = (LinearLayout) findViewById(R.id.layout_letter);
+        layoutLetter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, letterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout layoutWhatIf = (LinearLayout) findViewById(R.id.layout_whatif);
+        layoutWhatIf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, whatifActivity.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout layoutPower = (LinearLayout) findViewById(R.id.layout_power);
+        layoutPower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, powerActivity.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout layoutThinking = (LinearLayout) findViewById(R.id.layout_thinking);
+        layoutThinking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, thinkingActivity.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout layoutNation = (LinearLayout) findViewById(R.id.layout_nation);
+        layoutNation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, nationActivity.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout layout1984 = (LinearLayout) findViewById(R.id.layout_a1984);
+        layout1984.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, a1984Activity.class);
+                startActivity(intent);
+            }
+        });
+        checkDisplay();
+
+    }
+    public void checkDisplay() {
+        SharedData data = SharedData.getInstance();
+        for(int i = 0; i < data.items.length; i++)
+        {
+            if(data.items[i])
+            {
+                switch (i){
+                    case 0:
+                        Button button = (Button) findViewById(R.id.button_delivering_happiness);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 1:
+                        button = (Button) findViewById(R.id.button_stumbling_on_happiness);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 2:
+                        button = (Button) findViewById(R.id.button_shortness);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 3:
+                        button = (Button) findViewById(R.id.button_meditations);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 4:
+                        button = (Button) findViewById(R.id.button_letter);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 5:
+                        button = (Button) findViewById(R.id.button_whatif);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 6:
+                        button = (Button) findViewById(R.id.button_power);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 7:
+                        button = (Button) findViewById(R.id.button_thinking);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 8:
+                        button = (Button) findViewById(R.id.button_nation);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+                    case 9:
+                        button = (Button) findViewById(R.id.button_1984);
+                        button.setBackgroundColor(Color.GREEN);
+                        button.setText("Added");
+                        break;
+
+                }
+            }
+        }
     }
     public void checkButtonToCart(View view) {
         Button button = (Button) view;

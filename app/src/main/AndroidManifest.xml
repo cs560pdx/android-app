@@ -16,7 +16,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".AnotherActivity" />
-        <activity android:name=".deliveringActivity"></activity>
+        <activity android:name=".deliveringActivity" />
+        <activity android:name=".stumblingActivity" />
+        <activity android:name=".shortnessActivity" />
+        <activity android:name=".meditationsActivity" />
+        <activity android:name=".letterActivity" />
+        <activity android:name=".whatifActivity" />
+        <activity android:name=".powerActivity" />
+        <activity android:name=".thinkingActivity" />
+        <activity android:name=".nationActivity" />
+        <activity android:name=".a1984Activity"></activity>
     </application>
 
 </manifest>
